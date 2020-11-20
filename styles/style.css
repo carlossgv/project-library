@@ -1,5 +1,27 @@
+.libraryList {
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr;
+}
+
 .listDiv {
     padding: 5px 10px;
     margin: 5px;
     box-shadow: 1px 0px 3px;
+    z-index: 0;
+    position: relative;
+}
+/* 
+.popupForm {
+    position: absolute;
+    background-color: yellowgreen;
+} */
+
+#newBookForm {
+    position: absolute;
+    background-color: yellow;
+}
+
+.formInput {
+    display: flex;
+    flex-wrap: wrap;
 }
