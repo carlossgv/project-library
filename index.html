@@ -4,70 +4,41 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>Title here!</title>
+    <title>Library</title>
 
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
 <body>
-    <div id="newBookButtonDiv">
-        <button id="newBookButton" class="button">NEW BOOK</button>
+    <div class="new-book-form">
+        <form>
+            <label for="title">Title:</label>
+            <input type="text" name="title">
+            <label for="author">Author:</label>
+            <input type="text" name="author">
+            <label for="pages"># Pages:</label>
+            <input type="number" name="pages">
+            <label for="read">Read:</label>
+            <input type="checkbox" name="read">
+            <input type="submit" value="Add book to library">
+        </form>
     </div>
-    <div class="libraryList" id="libraryList">
-        <div type="text/html" id="newBookForm" class="form">
-            <form id="newBookForm" class="form">
-                <div class="formInput">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title">
-                </div> 
-                <div class="formInput">
-                    <label for="author">Author</label>
-                    <input type="text" id="author" name="author">
-                </div> 
-                <div class="formInput">
-                    <label for="pages">Number of Pages</label>
-                    <input type="text" id="pages" name="pages">
-                </div>  
-                <div class="formInput">
-                    <label for="read">Have your read it?</label>
-                    <input type="radio" name="read" id="read" value="Read">
-                    <input type="radio" name="read" id="notRead" value="Not read">
-                </div>
-                <div class="formInput">
-                    <input type="button" id="addBookButton" class="button" value="Add Book">
-                </div>
-            </form>
-        </div>
+    <button type="button" class="open-form">Add new book</button>
+    <div class="book-list">
+        <table id="book-table">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read</th>
+                <th>Remove</th>
+            </tr>
+        </table>
     </div>
 
 </body>
 
 <script src="scripts/script.js"></script>
-<!-- Hidden form to get with new book button -->
-<!-- <script type="text/html" id="newBookForm" class="form">
-    <form id="newBookForm" class="form">
-        <div class="formInput">
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title">
-        </div> 
-        <div class="formInput">
-            <label for="author">Author</label>
-            <input type="text" id="author" name="author">
-        </div> 
-        <div class="formInput">
-            <label for="pages">Number of Pages</label>
-            <input type="text" id="pages" name="pages">
-        </div>  
-        <div class="formInput">
-            <label for="read">Have your read it?</label>
-            <input type="radio" name="read" id="read" value="Read">
-            <input type="radio" name="read" id="notRead" value="Not read">
-        </div>
-        <div class="formInput">
-            <input type="submit" id="addBookButton" class="button" value="Add Book">
-        </div>
-    </form>
-</script> -->
 
 </html>

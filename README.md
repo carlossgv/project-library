@@ -1,2 +1,2 @@
 # project-library
-The Odin Project Javascrip Library
+The Odin Project Javascript Library
