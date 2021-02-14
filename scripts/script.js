@@ -1,3 +1,30 @@
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  
+  printInfo(read) {
+    if (this.read === true) {
+      read = 'read';
+    } else {
+      read = 'not read';
+    }
+    console.log(`${this.title} by ${this.author}, ${this.pages} pages, ${read}`);
+  }
+
+  readUpdate(read) {
+    if (this.read === true) {
+      this.read = false;
+    } else {
+      this.read = true;
+    }
+  }
+}
+
+
 let mando = new Book('Mandalorian', 'George Lucas', 200, true);
 let witcher = new Book('The Witcher', 'Zapowsky', 500, false);
 let toy_story = new Book('Toy Story', 'Pixar', 100, false);
@@ -63,10 +90,10 @@ function addRow(book) {
   row.className = `row_${book.title.replace(/\s+/g, '-').toLowerCase()}`
   let checkbox;
   let remove_button = document.createElement('button');
-  remove_button.className = 'removeButton';
+  remove_button.className = 'btn btn-danger removeButton';
   remove_button.id = `remove_${book.title.replace(/\s+/g, '-').toLowerCase()}`
 
-  remove_button.innerHTML = 'Remove';
+  remove_button.innerHTML = 'X';
 
   for (att in book) {
     let data_node = document.createElement('td');
@@ -96,30 +123,31 @@ function addRow(book) {
   table.appendChild(row);
 }
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
 
-Book.prototype.printInfo = function () {
-  let read;
-  if (this.read === true) {
-    read = 'read';
-  } else {
-    read = 'not read';
-  }
-  console.log(`${this.title} by ${this.author}, ${this.pages} pages, ${read}`);
-};
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
 
-Book.prototype.readUpdate = function () {
-  if (this.read === true) {
-    this.read = false;
-  } else {
-    this.read = true;
-  }
-};
+// Book.prototype.printInfo = function () {
+//   let read;
+//   if (this.read === true) {
+//     read = 'read';
+//   } else {
+//     read = 'not read';
+//   }
+//   console.log(`${this.title} by ${this.author}, ${this.pages} pages, ${read}`);
+// };
+
+// Book.prototype.readUpdate = function () {
+//   if (this.read === true) {
+//     this.read = false;
+//   } else {
+//     this.read = true;
+//   }
+// };
 
 function toggleDiv(div) {
   if (div.style.display === 'none') {
